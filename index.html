@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licores Avellaneda</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licores Avellaneda</title>
+  <style>
+    header {
+      background-color: #000; /* fondo negro */
+      color: white;           /* texto blanco */
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: white;
+    }
+
+    .logo-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    /* 📱 Ajuste para celular */
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 42px;      /* más grande en celular */
+      }
+
+      .logo-icon {
+        font-size: 30px;
+      }
+ 
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -232,6 +266,16 @@ h3 {
             background-color: #218838;
         }
     </style>
+	</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">🥃</span> Licores <span>Avellaneda</span>
+      </div>
+    </div>
+  </header>
     <script>
         const cart = {};
 
@@ -352,8 +396,8 @@ h3 {
         <div class="nav-links">
             <a href="#" onclick="showSection(event, 'inicio')">Inicio</a>
             <a href="#" onclick="showSection(event, 'catalogo')">Catálogo</a>
-            <a href="#" onclick="showSection(event, 'promociones')">Promociones</a>
-	    <a href="#" onclick="showSection(event, 'Lo Nuevo')">Lo Nuevo</a>
+            <a href="#" onclick="showSection(event, 'Ofertas')">Ofertas</a>
+	    <a href="#" onclick="showSection(event, 'Novedades')">Novedades</a>
         </div>
         <div id="search-bar-container">
             <input type="text" id="search-bar" placeholder="Buscar productos...">
@@ -7373,25 +7417,27 @@ h3 {
 
 
  </section>
-<section id="promociones">
-        <h1>Promociones</h1>
+<section id="Ofertas">
+        <h1>Ofertas</h1>
 <div class="product-container">
 
 
 <div class="product">
-    <h2>2 Buchanan's 12 Litro Promo</h2>
-<h3>2 Buchanan's 12 Litro</h3>
-<h3>POR</h3>
-<h3>40.000</h3>
-
-    <img src="Whisky_Comprimido/Buchanans_12.jpg" alt="Buchanan's 12 Litro">
+    <h2>Buchanans 12 Litro</h2>
+	<h3>Buchanans 12 Litro</h3>
+	<h3>X2</h3>
+	<h3>40.000</h3>
+    <img src="Whisky_Comprimido/Buchanans_12.jpg
+" alt="Buchanans 12 Litro">
     <p class="price">₡40000</p>
     <div class="quantity-controls">
-        <button class="minus" onclick="removeFromCart('2 Buchanan's 12 Litro Promo')" aria-label="Disminuir cantidad">-</button>
-        <span class="quantity" id="counter-2-Buchanan-s-12-Litro-Promo">0</span>
-        <button class="plus" onclick="addToCart('2 Buchanan's 12 Litro Promo', 40000)" aria-label="Aumentar cantidad">+</button>
+        <button class="minus" onclick="removeFromCart('Buchanans 12 Litropromo')" aria-label="Disminuir cantidad">-</button>
+        <span class="quantity" id="counter-Buchanans-12-Litropromo">0</span>
+        <button class="plus" onclick="addToCart('Buchanans 12 Litropromo', 40000)" aria-label="Aumentar cantidad">+</button>
     </div>
 </div>
+
+
 
 
 <div class="product">
@@ -7446,8 +7492,8 @@ h3 {
     </section>
 
 	
-<section id="Lo Nuevo">
-        <h1>Lo Nuevo</h1>
+<section id="Novedades">
+        <h1>Novedades</h1>
 <div class="product-container">
 
 
@@ -7461,6 +7507,7 @@ h3 {
         <button class="plus" onclick="addToCart('Buchanans Two Souls Botella', 33000)" aria-label="Aumentar cantidad">+</button>
     </div>
 </div>
+
 
 
 
